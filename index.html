@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For You — A Birthday Little Corner ♡</title>
+<meta name="description" content="A little birthday corner of the internet, made just for you.">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@400;500;600&display=swap');
+
+:root{
+  --ink:#272326;
+  --muted:#746c70;
+  --paper:#f8f4ef;
+  --rose:#b87579;
+  --rose2:#d9a5a2;
+  --cream:#fffaf5;
+  --line:rgba(39,35,38,.12);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;color:var(--ink);background:var(--paper);
+  font-family:"DM Sans",system-ui,sans-serif;overflow-x:hidden;
+}
+body:before{
+  content:"";position:fixed;inset:0;pointer-events:none;z-index:50;opacity:.08;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.6'/%3E%3C/svg%3E");
+}
+.hero{
+  min-height:100svh;position:relative;display:grid;place-items:center;
+  padding:38px 20px;overflow:hidden;
+  background:radial-gradient(circle at 15% 20%,#ead5cf 0 12%,transparent 35%),
+             radial-gradient(circle at 85% 80%,#e5c7c0 0 10%,transparent 34%),var(--paper);
+}
+.hero-card{
+  width:min(1100px,100%);display:grid;grid-template-columns:1.05fr .95fr;
+  gap:clamp(30px,6vw,80px);align-items:center;
+}
+.kicker{text-transform:uppercase;letter-spacing:.24em;font-size:11px;color:var(--rose);font-weight:600}
+h1{
+  font-family:"Playfair Display",Georgia,serif;font-weight:500;
+  font-size:clamp(58px,10vw,128px);line-height:.84;letter-spacing:-.055em;margin:20px 0;
+}
+h1 em{font-weight:400}
+.hero-copy p{max-width:470px;color:var(--muted);font-size:16px;line-height:1.8}
+.date{margin-top:28px;font-size:12px;letter-spacing:.12em;color:var(--muted)}
+.photo-frame{
+  position:relative;width:min(470px,86vw);margin:auto;transform:rotate(2deg);
+}
+.photo-frame:before{
+  content:"";position:absolute;inset:-12px;background:#fff;box-shadow:0 25px 60px #5d44451c;
+}
+.photo-frame img{display:block;position:relative;width:100%;aspect-ratio:3/4;object-fit:cover}
+.photo-caption{
+  position:relative;background:#fff;padding:18px 18px 20px;text-align:center;
+  font-family:"Playfair Display",Georgia,serif;font-style:italic;font-size:17px;
+}
+.scroll{position:absolute;bottom:22px;left:50%;transform:translateX(-50%);font-size:10px;letter-spacing:.18em;color:var(--muted)}
+.section{padding:110px 20px}
+.inner{width:min(1050px,100%);margin:auto}
+.section-head{display:flex;justify-content:space-between;align-items:end;gap:25px;margin-bottom:45px}
+.section h2{
+  font-family:"Playfair Display",Georgia,serif;font-size:clamp(40px,6vw,70px);
+  line-height:1;margin:0;font-weight:500;letter-spacing:-.04em;
+}
+.section-head p{max-width:330px;color:var(--muted);line-height:1.7;font-size:14px}
+.gallery{
+  display:grid;grid-template-columns:repeat(12,1fr);gap:18px;align-items:start;
+}
+.polaroid{
+  background:#fff;padding:10px 10px 14px;box-shadow:0 16px 40px #3d2d3214;
+  transition:.45s cubic-bezier(.2,.8,.2,1);cursor:pointer;
+}
+.polaroid:hover{transform:translateY(-10px) rotate(0deg)!important;box-shadow:0 25px 60px #3d2d3224}
+.polaroid img{display:block;width:100%;height:100%;object-fit:cover;aspect-ratio:4/5}
+.polaroid small{display:block;text-align:center;padding:12px 3px 0;font-family:"Playfair Display",Georgia,serif;font-style:italic;font-size:15px}
+.p1{grid-column:1/6;transform:rotate(-2deg)}
+.p2{grid-column:6/10;transform:translateY(45px) rotate(2.5deg)}
+.p3{grid-column:10/13;transform:translateY(-15px) rotate(-2deg)}
+.p4{grid-column:3/9;transform:translateY(70px) rotate(1.5deg)}
+.p4 img{aspect-ratio:5/4}
+.p5{grid-column:1/5;transform:translateY(20px) rotate(-1.5deg)}
+.p6{grid-column:5/9;transform:translateY(85px) rotate(2deg)}
+.p7{grid-column:9/13;transform:translateY(25px) rotate(-2deg)}
+.p5 img,.p6 img,.p7 img{aspect-ratio:4/5}
+@media(max-width:760px){
+  .p5,.p6,.p7{grid-column:auto;transform:none!important}
+}
+
+
+.letter-wrap{display:grid;grid-template-columns:.75fr 1.25fr;gap:55px;align-items:center}
+.stamp{
+  width:170px;height:170px;border:1px solid var(--line);border-radius:50%;display:grid;place-items:center;
+  margin:auto;position:relative;color:var(--rose);text-align:center;
+}
+.stamp:after{content:"♡";font-size:42px;position:absolute}
+.stamp span{font-size:10px;letter-spacing:.18em;text-transform:uppercase;max-width:80px;line-height:1.5}
+.letter{
+  background:var(--cream);padding:clamp(30px,5vw,62px);box-shadow:0 20px 60px #4b333312;
+  border:1px solid #fff;position:relative;
+}
+.letter:before{content:"";position:absolute;inset:13px;border:1px solid var(--line);pointer-events:none}
+.letter p{font-family:"Playfair Display",Georgia,serif;font-size:clamp(18px,2.2vw,23px);line-height:1.8;margin:0 0 18px}
+.signature{font-family:"Playfair Display",Georgia,serif;font-style:italic;font-size:24px;color:var(--rose);margin-top:30px}
+
+.reasons{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.reason{border:1px solid var(--line);padding:30px;background:#ffffff60;min-height:190px}
+.reason b{font-family:"Playfair Display",Georgia,serif;font-size:40px;font-weight:400;color:var(--rose)}
+.reason h3{font-family:"Playfair Display",Georgia,serif;font-size:23px;font-weight:500;margin:14px 0 8px}
+.reason p{color:var(--muted);font-size:13px;line-height:1.7;margin:0}
+
+.final{
+  min-height:80vh;display:grid;place-items:center;text-align:center;padding:100px 20px;
+  background:#252124;color:#f8f1ec;position:relative;overflow:hidden;
+}
+.final:before,.final:after{content:"";position:absolute;border:1px solid #ffffff15;border-radius:50%}
+.final:before{width:480px;height:480px;top:-230px;left:-180px}
+.final:after{width:650px;height:650px;bottom:-420px;right:-250px}
+.final-inner{position:relative;z-index:1}
+.final .kicker{color:#d9a5a2}
+.final h2{font-family:"Playfair Display",Georgia,serif;font-size:clamp(52px,9vw,105px);line-height:.9;font-weight:400;margin:22px 0}
+.final p{color:#c7bfc1;max-width:480px;margin:0 auto 32px;line-height:1.8}
+button{
+  border:1px solid #ffffff38;background:#fff;color:#272326;border-radius:999px;
+  padding:14px 23px;font:600 12px "DM Sans",sans-serif;letter-spacing:.08em;
+  cursor:pointer;transition:.25s;
+}
+button:hover{transform:translateY(-2px);background:#f1ded9}
+.secret{max-height:0;overflow:hidden;transition:max-height .8s ease;margin:auto;max-width:560px}
+.secret.open{max-height:240px}
+.secret p{font-family:"Playfair Display",Georgia,serif;font-size:22px;font-style:italic;margin-top:28px}
+footer{text-align:center;padding:22px;color:#887e81;background:#252124;font-size:10px;letter-spacing:.16em}
+
+.heart{
+  position:fixed;bottom:-30px;font-size:18px;opacity:0;pointer-events:none;z-index:60;
+  animation:float 5s linear forwards;
+}
+@keyframes float{0%{transform:translateY(0) rotate(0);opacity:0}10%{opacity:.7}100%{transform:translateY(-110vh) rotate(35deg);opacity:0}}
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .8s ease,transform .8s ease}
+.reveal.show{opacity:1;transform:none}
+
+@media(max-width:760px){
+  .hero-card{grid-template-columns:1fr;gap:35px}
+  .hero-copy{text-align:center}.hero-copy p{margin-inline:auto}
+  .photo-frame{width:min(390px,82vw)}
+  .section{padding:80px 18px}
+  .section-head{display:block}.section-head p{margin-top:18px}
+  .gallery{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .p1,.p2,.p3,.p4{grid-column:auto;transform:none!important}
+  .p1,.p4{grid-row:span 1}.p4 img{aspect-ratio:4/5}
+  .letter-wrap{grid-template-columns:1fr;gap:35px}
+  .reasons{grid-template-columns:1fr}
+  .reason{min-height:auto}
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-card">
+    <div class="hero-copy reveal">
+      <div class="kicker">a little something for you</div>
+      <h1>Happy<br><em>Birthday,</em><br>you.</h1>
+      <p>
+        I wanted to make you something that feels a little like us —
+        simple, warm, slightly silly, and full of memories I never want to lose.
+      </p>
+      <div class="date">MADE WITH LOVE · JUST FOR YOU ♡</div>
+    </div>
+
+    <div class="photo-frame reveal">
+      <img src="photo1.jpg" alt="A memory of us">
+      <div class="photo-caption">my favourite place is wherever you are.</div>
+    </div>
+  </div>
+  <div class="scroll">SCROLL SLOWLY ↓</div>
+</header>
+
+<section class="section">
+  <div class="inner">
+    <div class="section-head reveal">
+      <div>
+        <div class="kicker">seven little moments</div>
+        <h2>Us, in frames.</h2>
+      </div>
+      <p>Some moments are ordinary while they're happening. Then one day, you realise they're the ones you'll remember forever.</p>
+    </div>
+
+    <div class="gallery">
+      <div class="polaroid p1 reveal"><img src="photo2.jpg" alt="A memory of us"><small>the smiles I could look at forever</small></div>
+      <div class="polaroid p2 reveal"><img src="photo3.jpg" alt="A memory together"><small>one of my favourite us-es</small></div>
+      <div class="polaroid p3 reveal"><img src="photo4.jpg" alt="A happy memory"><small>you make ordinary days special</small></div>
+      <div class="polaroid p4 reveal"><img src="photo5.jpg" alt="A memory together in the car"><small>late rides, loud laughs, favourite person</small></div>
+      <div class="polaroid p5 reveal"><img src="photo6.jpg" alt="A beautiful portrait"><small>how are you this pretty, honestly?</small></div>
+      <div class="polaroid p6 reveal"><img src="photo7.jpg" alt="A festive memory together"><small>you + me + a little bit of magic</small></div>
+      <div class="polaroid p7 reveal"><img src="photo1.jpg" alt="Another memory of us"><small>and somehow, every picture feels like home</small></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:150px">
+  <div class="inner letter-wrap">
+    <div class="reveal">
+      <div class="stamp"><span>for the<br>girl who<br>makes me<br>smile</span></div>
+    </div>
+    <div class="letter reveal">
+      <p>Hey you,</p>
+      <p>
+        Happy birthday to the person who has quietly become such a beautiful
+        part of my life. Thank you for the laughs, the random little moments,
+        the memories, and for simply being you.
+      </p>
+      <p>
+        I hope this year gives you everything your heart has been wishing for.
+        More reasons to smile, more places to go, more stories to tell —
+        and, selfishly, many more memories for us to make together.
+      </p>
+      <p>Keep that smile. It suits you more than anything else.</p>
+      <div class="signature">— yours, always ♡</div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="inner">
+    <div class="section-head reveal">
+      <div>
+        <div class="kicker">three tiny truths</div>
+        <h2>Things I love.</h2>
+      </div>
+    </div>
+    <div class="reasons">
+      <div class="reason reveal"><b>01</b><h3>Your smile</h3><p>It has this unfair ability to make everything around you feel lighter.</p></div>
+      <div class="reason reveal"><b>02</b><h3>Your little things</h3><p>The tiny habits, expressions and moments you probably don't even notice — I do.</p></div>
+      <div class="reason reveal"><b>03</b><h3>Being us</h3><p>No perfect plan needed. Give me a normal day with you and I'll take it.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="final">
+  <div class="final-inner reveal">
+    <div class="kicker">one last thing</div>
+    <h2>Make a wish.<br>I'll make a memory.</h2>
+    <p>There is a tiny surprise hidden here. Because every birthday deserves at least one little secret.</p>
+    <button id="wishBtn">OPEN YOUR LITTLE NOTE ♡</button>
+    <div class="secret" id="secret">
+      <p>“No matter how many birthdays come and go, I hope I get to keep finding new reasons to celebrate you.”</p>
+    </div>
+  </div>
+</section>
+<footer>MADE ESPECIALLY FOR YOU · ♡</footer>
+
+<script>
+const observer = new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('show'); });
+},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+
+document.getElementById('wishBtn').addEventListener('click', function(){
+  document.getElementById('secret').classList.toggle('open');
+  this.textContent = document.getElementById('secret').classList.contains('open')
+    ? 'CLOSE THE NOTE ♡' : 'OPEN YOUR LITTLE NOTE ♡';
+});
+
+function heart(){
+  const h=document.createElement('div');
+  h.className='heart';
+  h.textContent=['♡','♥','✦','˚'][Math.floor(Math.random()*4)];
+  h.style.left=Math.random()*100+'vw';
+  h.style.animationDuration=(4+Math.random()*4)+'s';
+  h.style.fontSize=(12+Math.random()*16)+'px';
+  document.body.appendChild(h);
+  setTimeout(()=>h.remove(),8000);
+}
+setInterval(heart, 1700);
+</script>
+</body>
+</html>
